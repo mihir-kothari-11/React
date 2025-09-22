@@ -114,7 +114,7 @@ Example: Material UI, Chakra UI, Ant Design are React libraries.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-1. What are Hooks?
+1. What are Hooks? (It is used for ui updation)
 
 Hooks are special functions introduced in React 16.8.
 
