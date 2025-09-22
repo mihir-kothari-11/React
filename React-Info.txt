@@ -169,3 +169,82 @@ Always use the setter function to update state.
 Works with strings, numbers, booleans, arrays, and objects.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is React Fiber?
+
+React Fiber is the new reconciliation engine in React (introduced in React 16).
+
+It’s the algorithm React uses to render and update the DOM efficiently.
+
+Before React 16, React used a stack-based algorithm, which was synchronous (once rendering started, React couldn’t stop until finished).
+
+Fiber makes rendering asynchronous and interruptible, so React apps feel smoother.
+
+👉 In short: React Fiber = React’s way of scheduling rendering work in small chunks.
+
+
+🔹 2. Why Fiber Was Needed
+
+Old React (pre-16):
+
+Rendering was blocking — if a component tree was huge, the browser froze until React finished updating.
+
+React Fiber (16+):
+
+Rendering is split into units of work (fibers).
+
+React can pause, resume, reuse, or abort work.
+
+High-priority updates (like typing in input, animations) get handled first, while low-priority updates wait.
+
+⚡ This improves performance and responsiveness.
+
+
+3. What is a Fiber?
+
+A Fiber is a JavaScript object that represents a unit of work (one component in the tree).
+
+Every component in React has a corresponding fiber node.
+
+Fiber keeps track of:
+
+Component type
+
+Props and state
+
+Parent and child relationships
+
+Effect tags (what needs to be updated: insert, update, delete)
+
+Priority of work
+
+
+5. Key Benefits of Fiber
+
+✅ Interruptible rendering → smooth UIs even in big apps.
+✅ Prioritized updates → animations and inputs stay responsive.
+✅ Better error handling (via Error Boundaries).
+✅ Lays foundation for Concurrent Mode (React 18’s concurrent features).
+
+
+✅ Summary
+
+React Fiber = React’s new reconciliation engine (React 16+).
+
+Breaks rendering into small units (fibers) → can pause/resume.
+
+Improves performance, responsiveness, and scheduling.
+
+Enables Concurrent React features.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ DOM vs Virtual DOM vs Fiber
+
+DOM → A real book you’re editing (hard to change quickly).
+
+Virtual DOM → A photocopy where you make quick changes and later apply only necessary edits to the real book.
+
+Fiber → A smart editor that decides which edits are urgent, breaks them into steps, and updates efficiently without stopping your workflow.
+
+------------------------------------------------------------------------------------------------------------------------------------------------

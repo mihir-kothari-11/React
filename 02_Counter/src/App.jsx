@@ -9,7 +9,19 @@ function App() {
   const addValue = () => {
     if(counter < 20)
     {
+      // In this only 1 value is added
       setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+
+      // This is add 4 + 1 from upper value 
+      setCounter(prevCounter => prevCounter + 1 )
+      setCounter(prevCounter => prevCounter + 1 )
+      setCounter(prevCounter => prevCounter + 1 )
+      setCounter(prevCounter => prevCounter + 1 )
+
     }
     else
     {
