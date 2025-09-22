@@ -1,0 +1,171 @@
+Q- What is React?
+Ans.
+React is a JavaScript library (not a framework) developed by Facebook in 2013.
+
+It’s used to build user interfaces (UI), especially single-page applications (SPA).
+
+React makes UIs faster, scalable, and easier to maintain by using components.
+
+👉 Example: Instead of writing full HTML repeatedly, React lets you split your UI into reusable components like <Navbar />, <Footer />, <Card />.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+2. Core Concepts of React
+a) Components
+
+The building blocks of React.
+
+Two types:
+
+Functional Components (preferred in modern React)
+
+Class Components (older approach, less used now)
+
+b) JSX (JavaScript XML)
+
+Syntax extension that allows us to write HTML-like code in JavaScript.
+
+JSX makes UI code readable and structured.
+
+c) Props
+
+Short for properties.
+
+Used to pass data from a parent component to a child component.
+
+d) State
+
+State is data that can change over time.
+
+Managed inside a component (unlike props which come from outside).
+
+In functional components, we use useState hook.
+
+e) Virtual DOM
+
+React uses a Virtual DOM (lightweight copy of the real DOM).
+
+When state changes:
+
+React updates the Virtual DOM.
+
+It compares changes with the previous Virtual DOM (diffing).
+
+It updates only the changed parts in the real DOM (reconciliation).
+⚡ This makes React super fast.
+
+🔹 3. React Hooks (Modern React)
+
+Hooks are special functions that let you “hook into” React features.
+
+useState → for managing state.
+
+useEffect → for side effects (fetch API, timers, etc.).
+
+useContext → for global state without prop drilling.
+
+useRef → for accessing/manipulating DOM elements.
+
+useReducer → for complex state management (like Redux-lite).
+
+🔹 4. Lifecycle in React
+
+For class components:
+
+Mounting → constructor, render, componentDidMount
+
+Updating → componentDidUpdate
+
+Unmounting → componentWillUnmount
+
+For functional components → use useEffect to handle lifecycle.
+
+
+🔹 6. State Management in React
+
+Small apps → useState or useContext.
+
+Large apps → Redux, Zustand, or Recoil.
+
+
+🔹 7. Advantages of React
+
+✅ Component-based architecture (reusable)
+✅ Fast with Virtual DOM
+✅ Rich ecosystem (libraries, tools)
+✅ Strong community support
+✅ Backed by Meta (Facebook)
+
+
+🔹 8. Disadvantages of React
+
+❌ It’s only the UI layer → need other libraries for routing & state.
+❌ JSX has a learning curve.
+❌ Too many state management solutions (Redux, MobX, Context, etc.).
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 1. What is a React Library?
+
+A React library is basically a collection of reusable components or hooks that you package and publish (for yourself or others).
+Instead of building full apps, you build building blocks (like Button, Card, Modal, etc.).
+
+Example: Material UI, Chakra UI, Ant Design are React libraries.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. What are Hooks?
+
+Hooks are special functions introduced in React 16.8.
+
+They let you use state, lifecycle methods, and other React features inside functional components (without needing class components).
+
+👉 Before hooks:
+
+State & lifecycle could only be used in class components.
+
+Functional components were “dumb” → just props + UI.
+
+👉 After hooks:
+
+Functional components can manage state, run side effects, and share logic.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is useState?
+
+useState is a React Hook that lets you add state to functional components.
+
+Before React 16.8, only class components had state.
+
+With useState, functional components can now store and update values that change over time.
+
+
+🔹 2. Syntax
+Example - const [state, setState] = useState(initialValue);
+
+state → the current state value
+
+setState → function to update the state
+
+initialValue → default value of the state
+
+
+4. Important Things About useState
+✅ a) State persists across renders
+
+Even if the component re-renders, the state value remains.
+
+
+✅ Summary
+
+useState = Adds state to functional components.
+
+Returns [value, setter].
+
+Always use the setter function to update state.
+
+Works with strings, numbers, booleans, arrays, and objects.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
