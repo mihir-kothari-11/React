@@ -1,0 +1,24 @@
+Steps : 
+1. Create a project and install 
+2. npm install -D tailwindcss postcss autoprefixer
+3. npm install -D tailwindcss@3.4.17
+4. npx tailwindcss init -p
+5. In tailwind.Config.js file 
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+6. In index css file
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+7. npm run dev
